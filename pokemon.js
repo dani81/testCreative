@@ -1,10 +1,10 @@
-angular.module('News', [])
+angular.module('pokemonBattle', [])
  
   .controller('MainCtrl', [
     '$scope',
     function($scope){
      $scope.posts = [];
-      $scope.addPost = function(){
+      $scope.addPokemon = function(){
         console.log($scope.pokemon);
           $scope.posts.push({
           title: "someTitle",
