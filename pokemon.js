@@ -5,11 +5,11 @@ angular.module('News', [])
     function($scope){
      $scope.posts = [];
       $scope.addPost = function(){
-        console.log("here");
+        console.log($scope.pokemon);
           $scope.posts.push({
           title: "someTitle",
           pokemonName: $scope.pokemon,
-          picture: "charmander.png"
+          picture: $scope.pokemon + ".png"
         });
        console.log("here");
        console.log($scope.posts[0]);
