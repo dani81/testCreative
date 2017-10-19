@@ -9,7 +9,7 @@ angular.module('News', [])
           $scope.posts.push({
           title: "someTitle",
           pokemonName: $scope.pokemon,
-          picture: "charmander.png"
+          picture: "<img src=\"" + $scope.pokemon + ".png\">"
         });
       };
   }
