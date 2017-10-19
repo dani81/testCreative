@@ -11,6 +11,8 @@ angular.module('News', [])
           pokemonName: $scope.pokemon,
           picture: "<img src=\"charmander.png\">"
         });
+       console.log("here");
+       console.log($scope.posts[0]);
       };
   }
 ]);
