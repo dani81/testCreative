@@ -33,33 +33,10 @@ angular.module('News', ['ui.router'])
         postFactory.posts.push({
           title: $scope.formContent,
           pokemonName: $scope.pokemon,
-          comments: []
+          picture: $scope.pokemon + ".png"
         });
         $scope.posts = postFactory.posts;
         $scope.title = '';
       };
   }
-])
-  .controller('PostCtrl', [
-    '$scope',
-    '$stateParams',
-    'postFactory', 
-    function($scope, $stateParams, postFactory){
-      console.log($scope);
-      console.log($stateParams);
-      console.log(postFactory);
-      
-      $scope.post = postFactory.posts[$stateParams.id];
-      
-      $scope.addComment = function(){
-        if($scope.body === '') { return; }
-        $scope.post.comments.push({
-          body: $scope.body,
-          upvotes: 0
-        });
-        $scope.body = '';
-      };
-    $scope.incrementUpvotes = function(comment){
-      comment.upvotes += 1; 
-    };
-  }]);
+]);
