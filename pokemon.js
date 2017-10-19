@@ -35,6 +35,7 @@ angular.module('News', ['ui.router'])
           pokemonName: $scope.pokemon,
           picture: $scope.pokemon + ".png"
         });
+        console.log($scope.posts[0]);
         $scope.posts = postFactory.posts;
         $scope.title = '';
       };
