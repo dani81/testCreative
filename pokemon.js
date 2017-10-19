@@ -32,15 +32,12 @@ angular.module('News', ['ui.router'])
         if($scope.formContent === '') { return; }
         postFactory.posts.push({
           title: $scope.formContent,
-          upvotes: 0,
+          pokemonName: $scope.pokemon,
           comments: []
         });
         $scope.posts = postFactory.posts;
         $scope.title = '';
       };
-      $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
-    };
   }
 ])
   .controller('PostCtrl', [
