@@ -11,7 +11,6 @@ angular.module('pokemonBattle', [])
           pokemonName: $scope.pokemon,
           picture: $scope.pokemon + ".png"
         });
-       console.log("here2");
        console.log($scope.posts[0]);
       };
   }
